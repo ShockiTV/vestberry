@@ -11,6 +11,12 @@ export const getCompanies = gql`
     }
   }`
 
+export const getSectors = gql`
+  query getSectors {
+    sector
+  }
+`
+
 export const addCompany = gql`
   mutation ($name: String!, $stage: String!, $sector: String!, $investmentSize: Int!) {
     addCompany(name: $name, stage: $stage, sector: $sector, investmentSize: $investmentSize) {

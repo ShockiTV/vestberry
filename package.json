@@ -21,6 +21,7 @@
     "author": "VESTBERRY Jan Kacer",
     "license": "Proprietary",
     "dependencies": {
+        "antd": "^3.7.3",
         "apollo-client": "^2.3.7",
         "apollo-client-preset": "^1.0.8",
         "babel-plugin-react-css-modules": "^3.4.2",
