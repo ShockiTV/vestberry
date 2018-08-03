@@ -164,10 +164,10 @@ const config = {
     new webpack.HotModuleReplacementPlugin({
       multiStep: false
     }),
-    new CopyWebpackPlugin([{
-      from: 'public',
-      to: ''
-    }])
+    // new CopyWebpackPlugin([{
+    //   from: 'public',
+    //   to: ''
+    // }])
   ],
   resolve: {
     modules: ['src', 'server', 'node_modules'],

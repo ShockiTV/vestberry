@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { compose } from "recompose"
+import { LoadingComponent, renderWhileLoadingOrError } from "./helpers";
 import pageQueries from './Page.queries'
 
-export const Page = ({company, loading}) => {
-  if (loading) {
-    return <span>Loading data...</span>
-  }
+export const Page = ({data: {company, loading}}) => {
 
   return (
     <table>
@@ -30,8 +29,12 @@ export const Page = ({company, loading}) => {
 }
 
 Page.propTypes = {
-  loading: PropTypes.bool,
-  company: PropTypes.array
+  data: PropTypes.shape({
+    company: PropTypes.array.isRequired,
+  })
 }
 
-export default pageQueries(Page)
+export default compose(
+  pageQueries,
+  renderWhileLoadingOrError(LoadingComponent)
+)(Page)

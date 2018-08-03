@@ -2,14 +2,14 @@ import React from 'react'
 import {ApolloProvider} from 'react-apollo'
 import Page from './Page'
 import client from './apollo'
-import styles from 'App.scss'
+import 'App.scss'
 
 const App = () =>
-  <div className={styles.main}>
-    <div className={styles.header}>
+  <div styleName="main">
+    <div styleName="header">
       VESTBERRY TEST ASSIGNMENT
     </div>
-    <div className={styles.content}>
+    <div styleName="content">
       <ApolloProvider client={client}>
         <Page />
       </ApolloProvider>
