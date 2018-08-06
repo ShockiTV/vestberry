@@ -40,7 +40,7 @@ const InvestmentContainer = ({ graphData }) => (
               textAnchor="middle"
               style={{ fontSize: 20 }}
               x={200} y={200}
-              text={["8", "COMPANIES"]}
+              text={[`${graphData.length}`, "COMPANIES"]}
             />
           </svg>
         </Row>
